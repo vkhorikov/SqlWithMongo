@@ -7,7 +7,7 @@ You can find the full description of it [here][L1]
 How to Get Started
 --------------
 
-In order to run the application, you need to [create a database][L2] and change the connection strings to SQL Server and MongoDB [here][L3]
+In order to run the application, you need to [create a database][L2] and change the connection strings for SQL Server and MongoDB [here][L3]
 
 [L1]: 1
 [L2]: SqlWithMongo.UI/Database.sql
