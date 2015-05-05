@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{533AA5AF-1E16-45C4-9EE0-DE1969BFC15F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqlWithMongo.Logic</RootNamespace>
+    <AssemblyName>SqlWithMongo.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\Vladimir\Downloads\fluent-nhibernate-master\fluent-nhibernate-master\src\FluentNHibernate\bin\Debug\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\Vladimir\Downloads\nhibernate-core-master\nhibernate-core-master\src\NHibernate\bin\Debug-2.0\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\MongoDB.Bson.2.0.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\MongoDB.Driver.2.0.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.0.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\Vladimir\Downloads\nhibernate-core-master\nhibernate-core-master\src\NHibernate\bin\Debug-2.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SqlAndMongo\MongoNode.cs" />
+    <Compile Include="SqlAndMongo\NodeLinkRepository.cs" />
+    <Compile Include="Sql\Node.cs" />
+    <Compile Include="Sql\NodeMap.cs" />
+    <Compile Include="Sql\NodeRepository.cs" />
+    <Compile Include="Utils\EventListener.cs" />
+    <Compile Include="Utils\Initer.cs" />
+    <Compile Include="Utils\Interceptor.cs" />
+    <Compile Include="Utils\UnitOfWork.cs" />
+    <Compile Include="SqlAndMongo\MongoNodeRepository.cs" />
+    <Compile Include="SqlAndMongo\MongoNodeMap.cs" />
+    <Compile Include="Utils\SessionFactory.cs" />
+    <Compile Include="SqlAndMongo\NodeLink.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
